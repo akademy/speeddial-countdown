@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Options</title>
+  <style>
+  	body { background-color: #fff; font-family: "Arial", "Helmet", "Freesans", sans-serif; }
+  	header { font-size: 1em; color: white; background-color: ; padding: 10px; vertical-align:middle; }
+  	header { background: #900 url(images/icon.png) no-repeat scroll 10px 10px; padding-left: 85px; height: 65px; }
+  	h1 { margin: 10px 0;padding:0;vertical-align:middle;display: block; }
+  	
+  	table { font-size: 0.7em;}
+  	tr { margin: 0; padding: 0px; }
+  	td { padding: 5px; margin: 0px; }
+  	thead tr { font-weight: bold; border-bottom: 1px solid #aaa;}
+  	tr > td:first-child { border-right: 1px solid #aaa; width: 50px; }
+  	ul { background-color: #bbb; border: 2px solid #999; padding: 10px; list-style-type: none;}
+  	
+  	li { background-color: #ccc; border: 1px solid #ddd; padding: 10px; }
+  	input[type=text] { width: 300px; }
+  	input[type=button] { min-width: 50px; }
+  	label { width: 100px; }
+  	li p { font-size: smaller;}
+  	
+   a:visited.jumpdown,a.jumpdown { text-decoration: none; color: #44f; font-size: 10px;}
+   a:visited.jumpup,a.jumpup { text-decoration: none; color: #44f; text-align:right; font-size: 10px; padding: 10px; display:block;}
+   a:visited.jumpup:before,a.jumpup:before,a:visited.jumpdown:before,a.jumpdown:before { content: "("; }
+   a:visited.jumpup:after,a.jumpup:after,a:visited.jumpdown:after,a.jumpdown:after { content: ")"; }
+   
+   footer { text-align: center;}
+  </style>
+ </head>
+ <body>
+ 
+ <div id="wrapper"> 
+ <header><h1>Countdown</h1></header>
+ <p>Here's your current settings:</p>
+ 
+ <p>Here you can change the settings:</p>
+ <form>
+ 
+ <ul>
+	<li><h3>Countdown settings</h3></li>
+   <li id="urlchange"><label for="url">Select speeddial link:</label>
+   <input type="text" name="url" id="url" value="" />
+   <input type="button" name="urlset" id="urlset" value="set"/>
+   <p>Set the link that is triggered when the speed dial is pressed, this can be any URL.<br/>
+    e.g.: http://www.bbc.co.uk/news/world/ or http://www.bbc.co.uk/turkce/ or http://www.facebook.com/BringBackFirefly</p>
+   <a class="jumpup" href="#current">back</a>
+   </li>
+   
+   <li id="date">
+   <label>Date:</label>
+   <select name="year" id="year" />
+     <option value="2011">2011</option>
+     <option value="2012">2012</option>
+     <option value="2013">2013</option>
+     <option value="2014">2014</option>
+     <option value="2015">2015</option>
+     <option value="2016">2016</option>
+     <option value="2017">2017</option>
+     <option value="2018">2018</option>
+     <option value="2019">2019</option>
+     <option value="2020">2020</option>
+     <option value="2021">2021</option>
+     <option value="2022">2022</option>
+     <option value="2023">2023</option>
+     <option value="2024">2024</option>
+   </select>
+   
+   <select name="month" id="month" />
+     <option value="1">January</option>
+     <option value="2">February</option>
+     <option value="3">March</option>
+     <option value="4">April</option>
+     <option value="5">May</option>
+     <option value="6">June</option>
+     <option value="7">July</option>
+     <option value="8">August</option>
+     <option value="9">September</option>
+     <option value="10">October</option>
+     <option value="11">November</option>
+     <option value="12">December</option>
+   </select>
+   
+   <select name="day" id="day" />
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+     <option value="4">4</option>
+     <option value="5">5</option>
+     <option value="6">6</option>
+     <option value="7">7</option>
+     <option value="8">8</option>
+     <option value="9">9</option>
+     <option value="10">10</option>
+     <option value="11">11</option>
+     <option value="12">12</option>
+     <option value="13">13</option>
+     <option value="14">14</option>
+     <option value="15">15</option>
+     <option value="16">16</option>
+     <option value="17">17</option>
+     <option value="18">18</option>
+     <option value="19">19</option>
+     <option value="20">20</option>
+     <option value="21">21</option>
+     <option value="22">22</option>
+     <option value="23">23</option>
+     <option value="24">24</option>
+     <option value="25">25</option>
+     <option value="26">26</option>
+     <option value="27">27</option>
+     <option value="28">28</option>
+     <option value="29">29</option>
+     <option value="30">30</option>
+     <option value="31">31</option>
+   </select>
+   <p>Set the date</p>
+   </li>
+   <li id="time">
+   
+   <label>Time</label>
+   <select name="hour" id="hour" />
+     <option value="0">00</option>
+     <option value="1">01</option>
+     <option value="2">02</option>
+     <option value="3">03</option>
+     <option value="4">04</option>
+     <option value="5">05</option>
+     <option value="6">06</option>
+     <option value="7">07</option>
+     <option value="8">08</option>
+     <option value="9">09</option>
+     <option value="10">10</option>
+     <option value="11">11</option>
+     <option value="12">12</option>
+     <option value="13">13</option>
+     <option value="14">14</option>
+     <option value="15">15</option>
+     <option value="16">16</option>
+     <option value="17">17</option>
+     <option value="18">18</option>
+     <option value="19">19</option>
+     <option value="20">20</option>
+     <option value="21">21</option>
+     <option value="22">22</option>
+     <option value="23">23</option>
+   </select>
+   
+   <select name="minute" id="minute" />
+     <option value="0">00</option>
+     <option value="1">01</option>
+     <option value="2">02</option>
+     <option value="3">03</option>
+     <option value="4">04</option>
+     <option value="5">05</option>
+     <option value="6">06</option>
+     <option value="7">07</option>
+     <option value="8">08</option>
+     <option value="9">09</option>
+     <option value="10">10</option>
+     <option value="11">11</option>
+     <option value="12">12</option>
+     <option value="13">13</option>
+     <option value="14">14</option>
+     <option value="15">15</option>
+     <option value="16">16</option>
+     <option value="17">17</option>
+     <option value="18">18</option>
+     <option value="19">19</option>
+     <option value="20">20</option>
+     <option value="21">21</option>
+     <option value="22">22</option>
+     <option value="23">23</option>
+     <option value="24">24</option>
+     <option value="25">25</option>
+     <option value="26">26</option>
+     <option value="27">27</option>
+     <option value="28">28</option>
+     <option value="29">29</option>
+     <option value="30">30</option>
+     <option value="31">31</option>
+     <option value="32">32</option>
+     <option value="33">33</option>
+     <option value="34">34</option>
+     <option value="35">35</option>
+     <option value="36">36</option>
+     <option value="37">37</option>
+     <option value="38">38</option>
+     <option value="39">39</option>
+     <option value="40">40</option>
+     <option value="41">41</option>
+     <option value="42">42</option>
+     <option value="43">43</option>
+     <option value="44">44</option>
+     <option value="45">45</option>
+     <option value="46">46</option>
+     <option value="47">47</option>
+     <option value="48">48</option>
+     <option value="49">49</option>
+     <option value="50">50</option>
+     <option value="51">51</option>
+     <option value="52">52</option>
+     <option value="53">53</option>
+     <option value="54">54</option>
+     <option value="55">55</option>
+     <option value="56">56</option>
+     <option value="57">57</option>
+     <option value="58">58</option>
+     <option value="59">59</option>
+   </select>
+   
+   <select name="second" id="second" />
+     <option value="0">00</option>
+     <option value="1">01</option>
+     <option value="2">02</option>
+     <option value="3">03</option>
+     <option value="4">04</option>
+     <option value="5">05</option>
+     <option value="6">06</option>
+     <option value="7">07</option>
+     <option value="8">08</option>
+     <option value="9">09</option>
+     <option value="10">10</option>
+     <option value="11">11</option>
+     <option value="12">12</option>
+     <option value="13">13</option>
+     <option value="14">14</option>
+     <option value="15">15</option>
+     <option value="16">16</option>
+     <option value="17">17</option>
+     <option value="18">18</option>
+     <option value="19">19</option>
+     <option value="20">20</option>
+     <option value="21">21</option>
+     <option value="22">22</option>
+     <option value="23">23</option>
+     <option value="24">24</option>
+     <option value="25">25</option>
+     <option value="26">26</option>
+     <option value="27">27</option>
+     <option value="28">28</option>
+     <option value="29">29</option>
+     <option value="30">30</option>
+     <option value="31">31</option>
+     <option value="32">32</option>
+     <option value="33">33</option>
+     <option value="34">34</option>
+     <option value="35">35</option>
+     <option value="36">36</option>
+     <option value="37">37</option>
+     <option value="38">38</option>
+     <option value="39">39</option>
+     <option value="40">40</option>
+     <option value="41">41</option>
+     <option value="42">42</option>
+     <option value="43">43</option>
+     <option value="44">44</option>
+     <option value="45">45</option>
+     <option value="46">46</option>
+     <option value="47">47</option>
+     <option value="48">48</option>
+     <option value="49">49</option>
+     <option value="50">50</option>
+     <option value="51">51</option>
+     <option value="52">52</option>
+     <option value="53">53</option>
+     <option value="54">54</option>
+     <option value="55">55</option>
+     <option value="56">56</option>
+     <option value="57">57</option>
+     <option value="58">58</option>
+     <option value="59">59</option>
+   </select>
+   
+   <p>Set the time.</p>
+   </li>
+   
+</ul>
+   
+<ul>
+   <li><input type="button" name="defaults" id="defaults" value="Reset to defaults"/></li>
+</ul>
+ 
+ </form> 
+ <script>
+	function setUrlHtml( url ) {
+		return '<a href="' + url + '">' + url + '</a>';
+	}
+	
+	var urlcurrent = document.getElementById( 'urlcurrent' );
+	
+	var url = document.getElementById( 'url' );
+	var urlset = document.getElementById( 'urlset' );
+	
+	var defaults = document.getElementById( 'defaults' );
+	
+	// setup
+	if ( widget.preferences.urlLink !== undefined ) {
+		url.value = widget.preferences.urlLink;
+		urlcurrent.innerHTML = setUrlHtml( widget.preferences.urlLink );
+	}
+	
+	
+	// update
+	urlset.addEventListener( 'click', function() {
+		widget.preferences.urlLink = url.value;
+		urlcurrent.innerHTML = 	setUrlHtml( widget.preferences.urlLink );
+	}, false );
+	
+	
+	// Reset
+	defaults.addEventListener( 'click', function() {
+		if( confirm('Reset all values to their default?') ) {		
+			widget.preferences.urlLink = url.value = "http://en.wikipedia.org/wiki/2020";	
+		}	
+	}, false );	
+	
+</script>
+ </div>
+ <br/><br/><br/><br/><br/><br/><br/>
+ <footer>Thanks for using the speeddial BBC News Ticker. Visit my website for other cool things: <a href="http://www.akademy.co.uk">www.akademy.co.uk</a>.<br/><br/>
+ Note that this extension is not endorsed by the BBC, but I thank them for their excellent news feed none the less. Enjoy.</footer>
+ </body>
+</html>

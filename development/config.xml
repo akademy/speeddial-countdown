@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="http://www.akademy.co.uk/software/CountdownSD/" defaultlocale="en" viewmodes="minimized" version="1.4.30">
+	<name short="CountdownSD">Speed dial countdown</name>
+	<description xml:lang="en">A countdown to remind you of a particular website.</description>
+	<author href="http://www.akademy.co.uk/me">Matthew Wilcoxson</author>
+    
+    <feature name="opera:speeddial" required="true">
+        <param name="url" value="http://www.bbc.co.uk/"/>
+    </feature> 
+    
+    <access origin="*" subdomains="true"/>
+    
+   <icon src="images/icon.png"/>
+   
+	<preference name="urlLink" value="http://en.wikipedia.org/wiki/2020" />
+	
+	<preference name="year" value="2020" />
+	<preference name="month" value="1" />
+	<preference name="day" value="1" />
+	
+	<preference name="hour" value="0" />
+	<preference name="minute" value="0" />
+	<preference name="second" value="0" />
+</widget>
