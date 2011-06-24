@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="http://www.akademy.co.uk/software/CountdownSD/" defaultlocale="en" viewmodes="minimized" version="1.4.30">
+<widget xmlns="http://www.w3.org/ns/widgets" id="http://www.akademy.co.uk/software/CountdownSD/" defaultlocale="en" viewmodes="minimized" version="1.0.2">
 	<name short="CountdownSD">Speed dial countdown</name>
 	<description xml:lang="en">A countdown to remind you of a particular website.</description>
 	<author href="http://www.akademy.co.uk/me">Matthew Wilcoxson</author>
     
     <feature name="opera:speeddial" required="true">
-        <param name="url" value="http://www.bbc.co.uk/"/>
+        <param name="url" value="http://en.wikipedia.org/wiki/2020"/>
     </feature> 
     
     <access origin="*" subdomains="true"/>

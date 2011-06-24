@@ -21,7 +21,7 @@ body {
 }
 #overlay {
 	background: -o-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%);
-	opacity: 0.9;
+	opacity: 0.8;
 	width: 100%;
 	height: 100%;
    display: table;
