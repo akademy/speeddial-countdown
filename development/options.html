@@ -5,7 +5,7 @@
   <style>
   	body { background-color: #fff; font-family: "Arial", "Helmet", "Freesans", sans-serif; }
   	header { font-size: 1em; color: white; background-color: ; padding: 10px; vertical-align:middle; }
-  	header { background: #900 url(images/icon.png) no-repeat scroll 10px 10px; padding-left: 85px; height: 65px; }
+  	header { background: #88F url(images/icon.png) no-repeat scroll 10px 10px; padding-left: 85px; height: 65px; }
   	h1 { margin: 10px 0;padding:0;vertical-align:middle;display: block; }
   	
   	table { font-size: 0.7em;}
@@ -13,9 +13,9 @@
   	td { padding: 5px; margin: 0px; }
   	thead tr { font-weight: bold; border-bottom: 1px solid #aaa;}
   	tr > td:first-child { border-right: 1px solid #aaa; width: 50px; }
-  	ul { background-color: #bbb; border: 2px solid #999; padding: 10px; list-style-type: none;}
+  	ul { background-color: #88F; border: 2px solid #55C; padding: 10px; list-style-type: none;}
   	
-  	li { background-color: #ccc; border: 1px solid #ddd; padding: 10px; }
+  	li { background-color: #ccf; border: 1px solid #aaf; padding: 10px; }
   	input[type=text] { width: 300px; }
   	input[type=button] { min-width: 50px; }
   	label { width: 100px; }
@@ -33,19 +33,12 @@
  
  <div id="wrapper"> 
  <header><h1>Countdown</h1></header>
- <p>Here's your current settings:</p>
- 
- <p>Here you can change the settings:</p>
  <form>
- 
  <ul>
-	<li><h3>Countdown settings</h3></li>
-   <li id="urlchange"><label for="url">Select speeddial link:</label>
+   <li id="urlchange"><label for="url">Background and link:</label>
    <input type="text" name="url" id="url" value="" />
    <input type="button" name="urlset" id="urlset" value="set"/>
-   <p>Set the link that is triggered when the speed dial is pressed, this can be any URL.<br/>
-    e.g.: http://www.bbc.co.uk/news/world/ or http://www.bbc.co.uk/turkce/ or http://www.facebook.com/BringBackFirefly</p>
-   <a class="jumpup" href="#current">back</a>
+   <p>Set the link that is triggered when the speed dial is pressed, and the background image.</p>
    </li>
    
    <li id="date">
@@ -277,44 +270,70 @@
    </li>
    
 </ul>
-   
-<ul>
-   <li><input type="button" name="defaults" id="defaults" value="Reset to defaults"/></li>
-</ul>
  
  </form> 
  <script>
-	function setUrlHtml( url ) {
-		return '<a href="' + url + '">' + url + '</a>';
-	}
-	
-	var urlcurrent = document.getElementById( 'urlcurrent' );
-	
 	var url = document.getElementById( 'url' );
 	var urlset = document.getElementById( 'urlset' );
 	
-	var defaults = document.getElementById( 'defaults' );
+	var year = document.getElementById( 'year' );
+	var month = document.getElementById( 'month' );
+	var day = document.getElementById( 'day' );
+	var hour = document.getElementById( 'hour' );
+	var minute = document.getElementById( 'minute' );
+	var second = document.getElementById( 'second' );
 	
 	// setup
 	if ( widget.preferences.urlLink !== undefined ) {
 		url.value = widget.preferences.urlLink;
-		urlcurrent.innerHTML = setUrlHtml( widget.preferences.urlLink );
 	}
-	
+	if ( widget.preferences.year !== undefined ) {
+		year.value = widget.preferences.year;
+	}
+	if ( widget.preferences.month !== undefined ) {
+		month.value = widget.preferences.month;
+	}
+	if ( widget.preferences.day !== undefined ) {
+		day.value = widget.preferences.day;
+	}
+	if ( widget.preferences.hour !== undefined ) {
+		hour.value = widget.preferences.hour;
+	}
+	if ( widget.preferences.minute !== undefined ) {
+		minute.value = widget.preferences.minute;
+	}
+	if ( widget.preferences.second !== undefined ) {
+		second.value = widget.preferences.second;
+	}
 	
 	// update
 	urlset.addEventListener( 'click', function() {
 		widget.preferences.urlLink = url.value;
-		urlcurrent.innerHTML = 	setUrlHtml( widget.preferences.urlLink );
 	}, false );
 	
+	year.addEventListener( 'change', function() {
+		widget.preferences.year = this.value;	
+	}, false );
 	
-	// Reset
-	defaults.addEventListener( 'click', function() {
-		if( confirm('Reset all values to their default?') ) {		
-			widget.preferences.urlLink = url.value = "http://en.wikipedia.org/wiki/2020";	
-		}	
-	}, false );	
+	month.addEventListener( 'change', function() {
+		widget.preferences.month = this.value;	
+	}, false );
+	
+	day.addEventListener( 'change', function() {
+		widget.preferences.day = this.value;	
+	}, false );
+	
+	hour.addEventListener( 'change', function() {
+		widget.preferences.hour = this.value;	
+	}, false );
+	
+	minute.addEventListener( 'change', function() {
+		widget.preferences.minute = this.value;	
+	}, false );
+	
+	second.addEventListener( 'change', function() {
+		widget.preferences.second = this.value;	
+	}, false );
 	
 </script>
  </div>
