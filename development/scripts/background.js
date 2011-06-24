@@ -1,7 +1,7 @@
 window.addEventListener('load', function() {
 
 	var toDate = null;
-	var debugging = true;
+	var debugging = false;
 	
     window.addEventListener( 'storage', function(event) {
 		debug( "Storage event: " + event.key + " " + event.oldValue + " " + event.newValue );
