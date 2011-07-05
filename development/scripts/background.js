@@ -35,6 +35,7 @@ window.addEventListener('load', function() {
 	var iframe = document.querySelector('iframe');
 	function updateUrl() {
     	if( widget.preferences.urlLink ) {
+            iframe.src = "loading.html";
 			iframe.src = widget.preferences.urlLink;
 		    if (opera.contexts.speeddial) {
 				opera.contexts.speeddial.url = widget.preferences.urlLink;
@@ -135,5 +136,6 @@ window.addEventListener('load', function() {
 	}, 500); // Twice a second to allow for slight delays in JavaScript execution
 		
     updateCountdown();
+    updateUrl();
     
 }, false);

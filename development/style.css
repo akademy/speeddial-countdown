@@ -18,6 +18,7 @@ body {
 	-o-transform: scale(0.5, 0.5) translate(-50%, -50%);
 	width: 198%;
 	height: 198%;
+    overflow: hidden;
 }
 #overlay {
 	background: -o-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%);
